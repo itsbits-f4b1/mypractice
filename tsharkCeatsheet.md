@@ -1,5 +1,3 @@
-
-```markdown
 # Cheatsheet: Wireshark/tshark auf der Konsole (mit PCAP-Speicherung) – Für fortgeschrittene Einsteiger
 
 Dieses Cheatsheet hilft dir, Netzwerkpakete auf der Konsole effizient mit **tshark** (dem CLI-Tool von Wireshark) aufzuzeichnen, zu filtern, zu speichern und zu analysieren. Alles mit ausführlichen Erklärungen, besonders für Linux-/Shell-geübte Nutzer.

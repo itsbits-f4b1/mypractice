@@ -1,5 +1,3 @@
-
-```markdown
 # Praxis-Aufgabenpaket: Nmap für HomeLab und Pentest-Grundlagen
 
 Mit diesen Aufgaben lernst und übst du die wichtigsten Einsatzmöglichkeiten von **nmap** in der Shell. Die Übungen vermitteln alle zentralen Scan-Arten und liefern sinnvolle Praxisbezüge zu deinem HomeLab. Am Ende schreibst du selbst ein erstes Skript für automatisierte Netzanalysen.

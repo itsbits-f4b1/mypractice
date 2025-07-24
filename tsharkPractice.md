@@ -1,5 +1,3 @@
-
-```markdown
 # Praxis-Aufgabenpaket: Wireshark/tshark in der Konsole anwenden und automatisieren
 
 Mit diesen Aufgaben kannst du dein Wissen und Handling von tshark (Wireshark CLI) praxisnah vertiefen. Die Aufgaben bauen logisch aufeinander auf – von Basics, über Filter/Analyse bis hin zum eigenen kleinen Script.

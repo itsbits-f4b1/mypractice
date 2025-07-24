@@ -1,5 +1,3 @@
-
-```markdown
 # Linux Essentials Cheatsheet – HomeLab & Pentesting Edition
 
 ## Navigation

@@ -1,5 +1,3 @@
-
-```markdown
 # Nmap-Cheatsheet mit Praxisbeispielen für Geübte Anfänger
 
 Nmap ist das Standard-Tool für Netzwerkerkundung und Pentesting. Die folgenden Scans sind wichtig für Analyse und Sicherheit. Jeder Scan ist mit einem typischen Praxis-Einsatz versehen.
