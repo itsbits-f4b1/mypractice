@@ -27,11 +27,30 @@ mkfs.ntfs                                    # Datenträgerformatieren
 ```
 ### Beispiele für die Anwendung Dateien und Verzeichnisse
 
-muss noch getestet werden.
+usbstick defekt erkennen 
 ```
 lsblk -p                                     # Laufwerke anzeigen, Flag -p zeigt agesamten pfad an /dev/...
+fdisk -l                                     # listet alle partitionen auf
 sudo mkfs.ntfs /dev/sdb1                     # Dateisystem auf Datenträger schreiben
+---
+wenn dies fehlschlägt
+---
+sudo fdisk /dev/sdb                         # eine neue partitionstabelle erstellen
+---
+wenn dies fehlschlägt kann ein hw deekt vorliegen
+---
+sudo dd if=/dev/urandom of=/dev/sdb bs=4M status=progress       #  partition mit zufallszahlen beschreiben
+---
+tritt hier gleich ein fehler auf kann der datenträger defekt sein
+---
 ```
+### beschreibung zufalsszahlen
+
+-/dev/urandom blockiert niemals: Auch wenn der Entropiepool vorübergehend leer ist, liefert es „Pseudozufallszahlen“ auf Basis kryptografisch sicherer Algorithmen weiter – für die allermeisten Einsatzzwecke wie auch das Füllen eines USB-Sticks mit Zufallsdaten ist die Qualität vollkommen ausreichend
+-/dev/random blockiert das Lesen, falls die Entropie im Pool erschöpft ist (z.B. bei starker Nutzung und wenig Zufallsquellen).
+-Beide beziehen ihre Zufallszahlen aus dem Kernel-Entropie-Pool, der durch schwer vorhersagbares Umgebungsrauschen (z.B. Tastaturanschläge, Festplattenzugriffe, Netzwerkverkehr) „gefüttert“ wird
+
+Die Ausgabe von /dev/urandom ist für fast alle Zwecke, auch für kryptographische Anwendungen, als sicher anzusehen (Ausnahme: bestimmte sehr hohe Sicherheitsanforderungen, etwa einige Zufallsgenerierungs-Szenarien beim frühesten Systemstart)
 
 ---
 
