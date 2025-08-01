@@ -44,11 +44,13 @@ sudo dd if=/dev/urandom of=/dev/sdb bs=4M status=progress       #  partition mit
 tritt hier gleich ein fehler auf kann der datenträger defekt sein
 ---
 ```
-### beschreibung zufalsszahlen
+### Beschreibung der Zufallszahl
 
--/dev/urandom blockiert niemals: Auch wenn der Entropiepool vorübergehend leer ist, liefert es „Pseudozufallszahlen“ auf Basis kryptografisch sicherer Algorithmen weiter – für die allermeisten Einsatzzwecke wie auch das Füllen eines USB-Sticks mit Zufallsdaten ist die Qualität vollkommen ausreichend
--/dev/random blockiert das Lesen, falls die Entropie im Pool erschöpft ist (z.B. bei starker Nutzung und wenig Zufallsquellen).
--Beide beziehen ihre Zufallszahlen aus dem Kernel-Entropie-Pool, der durch schwer vorhersagbares Umgebungsrauschen (z.B. Tastaturanschläge, Festplattenzugriffe, Netzwerkverkehr) „gefüttert“ wird
+- /dev/urandom blockiert niemals: Auch wenn der Entropiepool vorübergehend leer ist, liefert es „Pseudozufallszahlen“ auf Basis kryptografisch sicherer Algorithmen weiter – für die allermeisten Einsatzzwecke wie auch das Füllen eines USB-Sticks mit Zufallsdaten ist die Qualität vollkommen ausreichend 
+
+- /dev/random blockiert das Lesen, falls die Entropie im Pool erschöpft ist (z.B. bei starker Nutzung und wenig Zufallsquellen).  
+
+- Beide beziehen ihre Zufallszahlen aus dem Kernel-Entropie-Pool, der durch schwer vorhersagbares Umgebungsrauschen (z.B. Tastaturanschläge, Festplattenzugriffe, Netzwerkverkehr) „gefüttert“ wird
 
 Die Ausgabe von /dev/urandom ist für fast alle Zwecke, auch für kryptographische Anwendungen, als sicher anzusehen (Ausnahme: bestimmte sehr hohe Sicherheitsanforderungen, etwa einige Zufallsgenerierungs-Szenarien beim frühesten Systemstart)
 
@@ -76,6 +78,8 @@ less datei                                   # Interaktiv durchblättern
   q                                          # Beenden
 
 nano / vi datei                              # Datei bearbeiten (Editor)
+
+watch -n 1 "ps aux | grep dd"                # mit watch kann ein befehl dauerhaft aktualisiert werden das Flag -n gibt die aktualisierungszeit an default 2s (ohne -n)
 ```
 
 ---
@@ -129,6 +133,7 @@ rsync -av quelle/ benutzer@host:/pfad/       # Ordner synchronisieren
 
 ```
 ps aux                                      # Liste aller Prozesse
+ps aux | grep string (z.B. fdisk)                # gibt alle Prozess aus die z.B. fdisk enthalten
 top / htop                                  # Systemauslastung (live)
 kill PID                                    # Prozess gezielt beenden
 uname -a                                    # Kernel & Systeminfo
