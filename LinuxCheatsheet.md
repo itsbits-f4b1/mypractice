@@ -23,6 +23,14 @@ cp -r quelle ziel                            # Ordner inkl. Inhalt kopieren
 mv quelle ziel                               # Datei verschieben oder umbenennen
 rm datei                                     # Datei löschen
 rm -rf ordner                                # Ordner rekursiv & forciert löschen
+mkfs.ntfs                                    # Datenträgerformatieren
+```
+### Beispiele für die Anwendung Dateien und Verzeichnisse
+
+muss noch getestet werden.
+```
+lsblk -p                                     # Laufwerke anzeigen, Flag -p zeigt agesamten pfad an /dev/...
+sudo mkfs.ntfs /dev/sdb1                     # Dateisystem auf Datenträger schreiben
 ```
 
 ---
