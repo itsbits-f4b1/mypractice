@@ -81,10 +81,8 @@ sudo docker run hello-world
 ## 4. **Docker Compose – Template**
 
 ```yaml
-version: '3.8'
-
 services:
-  app:
+  nginx:
     image: nginx:latest
     container_name: web-nginx
     ports:
@@ -105,6 +103,13 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     restart: unless-stopped
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+    /var/run/docker.sock:/var/run/docker.sock \
+
 
 volumes:
   db_data:
