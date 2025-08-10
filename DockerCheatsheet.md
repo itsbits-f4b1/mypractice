@@ -80,6 +80,8 @@ sudo docker run hello-world
 
 ## 4. **Docker Compose – Template**
 
+unter servises werden die einzelnen Container angegeben.
+
 ```yaml
 services:
   nginx:

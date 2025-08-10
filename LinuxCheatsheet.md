@@ -90,6 +90,13 @@ watch -n 1 "ps aux | grep dd"                # mit watch kann ein befehl dauerha
 du -sh ordner/                               # Größe des Ordners
 df -h                                        # Freier Speicher auf Laufwerken
 chmod 755 datei                              # Rechte setzen (z. B. rwxr-xr-x)
+adduser Username                             # einen neuen USer anlegen.  
+passwd Username                              # Passwort anlegen/ändern eines Users  
+groupadd gruppennname                        # eine Gruppe hinzufügen  
+cat /etc/group                               # alle gruppen anzeigen  
+usermod -aG gruppenname Username             # User einer Gruppe hinzufügen. Danach System neustarten.  
+su Username                                  # Benutzer wechseln  
+whoami                                       # Aktuellen Benuter anzeigen.
 chown benutzer:gruppe datei                  # Eigentümer ändern
 ```
 
