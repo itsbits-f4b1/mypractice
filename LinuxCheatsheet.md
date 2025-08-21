@@ -152,6 +152,10 @@ whoami                                      # Angemeldeter Benutzer
 
 ## Tipps
 
+- installiere oh-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
 - Nutze `tail -f` zur Log-Überwachung (z. B. Docker-Container)
 - Kombiniere alles mit `|` (Pipes) für flexible Log-Filterung
 - Mit `man befehl` bekommst du Hilfe zu jedem Kommando
